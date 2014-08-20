@@ -1,15 +1,15 @@
-package com.example.dao;
+package com.example.dao.rest;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
-import javax.inject.Singleton;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.GenericType;
 
+import com.example.dao.CuentaDAO;
 import com.example.model.Cuenta;
 import com.example.model.Movimiento;
 
@@ -18,20 +18,13 @@ import com.example.model.Movimiento;
  * @author Gustavo Bazan
  *
  */
-@Singleton
 public class CuentaDAORestImpl implements CuentaDAO {
-    private static final CuentaDAORestImpl INSTANCE = new CuentaDAORestImpl();
 	
     private static final Logger logger = Logger.getLogger(CuentaDAORestImpl.class.toString());
-	private static final String SERVER = "http://acreencias.herokuapp.com/";
-			//"http://localhost:8080/acreencias/";//"http://acreencias.herokuapp.com/";
+	private final String SERVER;
     
-	private CuentaDAORestImpl(){
-    	
-    }
-
-    public static CuentaDAORestImpl getInstance() {
-        return INSTANCE;
+	public CuentaDAORestImpl(String server){
+    	SERVER = server;
     }
 	
     @Override

@@ -1,4 +1,4 @@
-package com.example.dao;
+package com.example.dao.rest;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,12 +8,12 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import java.util.logging.Logger;
 
-import javax.inject.Singleton;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.GenericType;
 
+import com.example.dao.MovimientoDAO;
 import com.example.model.Cliente;
 import com.example.model.Cuenta;
 import com.example.model.Movimiento;
@@ -23,19 +23,13 @@ import com.example.model.Movimiento;
  * @author Gustavo Bazan
  *
  */
-@Singleton
 public class MovimientoDAORestImpl implements MovimientoDAO {
-    private static final MovimientoDAORestImpl INSTANCE = new MovimientoDAORestImpl();
 
     private static final Logger logger = Logger.getLogger(MovimientoDAORestImpl.class.toString());
-    private static final String SERVER = "http://acreencias.herokuapp.com/";
-    		//"http://localhost:8080/acreencias/";//"http://acreencias.herokuapp.com/";
+    private final String SERVER;   
     
-    private MovimientoDAORestImpl(){
-    }
-	
-    public static MovimientoDAORestImpl getInstance() {
-        return INSTANCE;
+    public MovimientoDAORestImpl(String server){
+    	SERVER = server;
     }
 	
     @Override

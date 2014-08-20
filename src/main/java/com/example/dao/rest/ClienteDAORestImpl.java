@@ -1,16 +1,16 @@
-package com.example.dao;
+package com.example.dao.rest;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
-import javax.inject.Singleton;
 import javax.ws.rs.NotFoundException;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.GenericType;
 
+import com.example.dao.ClienteDAO;
 import com.example.model.Cliente;
 
 /**
@@ -18,21 +18,14 @@ import com.example.model.Cliente;
  * @author Gustavo Bazan
  *
  */
-@Singleton
 public class ClienteDAORestImpl implements ClienteDAO {
-    private static final ClienteDAORestImpl INSTANCE = new ClienteDAORestImpl();
 
     private static final Logger logger = Logger.getLogger(ClienteDAORestImpl.class.toString());
-    private static final String SERVER = "http://acreencias.herokuapp.com/";
-    		//"http://localhost:8080/acreencias/";//"http://acreencias.herokuapp.com/";
+    private final String SERVER;
     
-    private ClienteDAORestImpl(){
-    	
-    }
-
-    public static ClienteDAORestImpl getInstance() {
-        return INSTANCE;
-    }
+    public ClienteDAORestImpl(String server){
+    	SERVER = server;
+    }   
 	
     @Override
     public Cliente create(Cliente cliente) {

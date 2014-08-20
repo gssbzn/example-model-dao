@@ -1,6 +1,8 @@
 package com.example.dao;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -8,6 +10,9 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import com.example.dao.memory.ClienteDAOMemoryImpl;
+import com.example.factory.DAOFactory;
+import com.example.factory.DAOFactory.DAOTYPE;
 import com.example.model.Cliente;
 
 /**
@@ -16,13 +21,14 @@ import com.example.model.Cliente;
  *
  */
 public class ClienteDAOMemoryImplTest {
-	
-	private static ClienteDAOMemoryImpl dao;
+	private static DAOFactory daoFactory;
+	private static ClienteDAOMemoryImpl dao;	
 	private Cliente firstCliente; 
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		dao = (ClienteDAOMemoryImpl) DAOFactory.getClienteDAO();
+		daoFactory = DAOFactory.getDAOFactory(DAOTYPE.MEMORYFACTORY);
+		dao = (ClienteDAOMemoryImpl) daoFactory.getClienteDAO();
 	}
 
 	@AfterClass

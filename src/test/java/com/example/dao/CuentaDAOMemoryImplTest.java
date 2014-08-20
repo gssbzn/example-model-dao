@@ -10,6 +10,10 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import com.example.dao.memory.ClienteDAOMemoryImpl;
+import com.example.dao.memory.CuentaDAOMemoryImpl;
+import com.example.factory.DAOFactory;
+import com.example.factory.DAOFactory.DAOTYPE;
 import com.example.model.Cliente;
 import com.example.model.Cuenta;
 import com.example.model.Movimiento;
@@ -22,13 +26,15 @@ import com.example.model.TipoCuenta;
  */
 public class CuentaDAOMemoryImplTest {
 	
+	private static DAOFactory daoFactory;
 	private static CuentaDAOMemoryImpl cuentaDao;
 	private static ClienteDAOMemoryImpl clienteDao;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		clienteDao = (ClienteDAOMemoryImpl) DAOFactory.getClienteDAO();
-		cuentaDao = (CuentaDAOMemoryImpl) DAOFactory.getCuentaDAO();
+		daoFactory = DAOFactory.getDAOFactory(DAOTYPE.MEMORYFACTORY);
+		clienteDao = (ClienteDAOMemoryImpl) daoFactory.getClienteDAO();
+		cuentaDao = (CuentaDAOMemoryImpl) daoFactory.getCuentaDAO();
 		
 	}
 

@@ -1,4 +1,4 @@
-package com.example.dao;
+package com.example.dao.memory;
 
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -6,6 +6,7 @@ import java.util.Vector;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Logger;
 
+import com.example.dao.ClienteDAO;
 import com.example.model.Cliente;
 
 /**

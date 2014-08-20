@@ -1,4 +1,4 @@
-package com.example.dao;
+package com.example.dao.memory;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -8,6 +8,10 @@ import java.util.Vector;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Logger;
 
+import com.example.dao.ClienteDAO;
+import com.example.dao.CuentaDAO;
+import com.example.factory.DAOFactory;
+import com.example.factory.DAOFactory.DAOTYPE;
 import com.example.model.Cliente;
 import com.example.model.Cuenta;
 import com.example.model.Movimiento;
@@ -106,7 +110,8 @@ public class CuentaDAOMemoryImpl implements CuentaDAO {
 	
     @Override
     public List<Cuenta> findCuentasCliente(Integer cliente_id) {
-        ClienteDAO clienteDao = DAOFactory.getClienteDAO();		
+    	DAOFactory daoFactory = DAOFactory.getDAOFactory(DAOTYPE.MEMORYFACTORY);
+        ClienteDAO clienteDao = daoFactory.getClienteDAO();
         Cliente cliente = clienteDao.find(cliente_id);
         List<Cuenta> cuentasTemp = new  ArrayList<Cuenta>();
 
