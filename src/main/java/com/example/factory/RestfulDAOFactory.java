@@ -12,7 +12,7 @@ import com.example.dao.rest.MovimientoDAORestImpl;
  * @author Gustavo Bazan
  *
  */
-public class RestfulDAOFactory extends DAOFactory{
+public class RestfulDAOFactory extends DAOFactory {
 	private static String SERVER;
 	    
     public RestfulDAOFactory(String server){

@@ -1,6 +1,7 @@
 package com.example.model;
 
 /**
+ * Tipos de operaciones para un {@code Movimiento}
  * 
  * @author Gustavo Bazan
  *

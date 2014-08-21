@@ -12,7 +12,7 @@ import com.example.dao.memory.MovimientoDAOMemoryImpl;
  * @author Gustavo Bazan
  *
  */
-public class MemoryDAOFactory extends DAOFactory{
+public class MemoryDAOFactory extends DAOFactory {
 	
 	@Override
     public ClienteDAO getClienteDAO() {

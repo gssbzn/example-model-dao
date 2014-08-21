@@ -9,6 +9,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * La clase {@code Cliente} representa un cliente de la compañia.
+ * 
  * @author Gustavo Bazan
  *
  */

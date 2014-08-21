@@ -5,7 +5,7 @@ import java.util.List;
 import com.example.model.Movimiento;
 
 /**
- * 
+ * DAO for Movimiento DAO
  * @author Gustavo Bazan
  *
  */

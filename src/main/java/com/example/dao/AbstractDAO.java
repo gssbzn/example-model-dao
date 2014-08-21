@@ -8,7 +8,8 @@ import com.example.model.Model;
  * 
  * @author Gustavo Bazan
  *
- * @param <T>
+ * @param <T> Dao Model Type
+ * @param <K> Model Key Type
  */
 public interface AbstractDAO<T extends Model<K>, K> {
 	

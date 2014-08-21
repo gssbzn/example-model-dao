@@ -1,6 +1,7 @@
 package com.example.model;
 
 /**
+ * Tipos de {@code Cuenta} que puede tener un {@code Cliente}
  * 
  * @author Gustavo Bazan
  *

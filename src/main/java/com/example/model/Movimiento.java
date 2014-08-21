@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * La clase {@code Movimiento} representa los movimientos en las cuentas de los clientes
+ * La clase {@code Movimiento} representa los movimientos en las cuentas de los clientes.
  * 
  * <p>Los tipos de cuenta se encuentran definidos en {@link TipoMovimiento}</p>
  * 

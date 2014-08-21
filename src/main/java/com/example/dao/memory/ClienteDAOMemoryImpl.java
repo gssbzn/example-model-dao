@@ -10,15 +10,19 @@ import com.example.dao.ClienteDAO;
 import com.example.model.Cliente;
 
 /**
+ * Cliente DAO Memory Implementation.
  * 
  * @author Gustavo Bazan
  *
  */
 public class ClienteDAOMemoryImpl implements ClienteDAO {
-    private static final ClienteDAOMemoryImpl INSTANCE = new ClienteDAOMemoryImpl();
-
-    private static final Logger logger = Logger.getLogger(ClienteDAOMemoryImpl.class.toString());
+    /** Singleton instance */
+	private static final ClienteDAOMemoryImpl INSTANCE = new ClienteDAOMemoryImpl();
+    /** Logger */
+    private static final Logger logger = Logger.getLogger(ClienteDAOMemoryImpl.class.getCanonicalName());
+    /** Data */
     private static Vector<Cliente> clientes;
+    /** Threadsafe ID control */
     private static AtomicInteger LAST_ID;
 
     private ClienteDAOMemoryImpl(){

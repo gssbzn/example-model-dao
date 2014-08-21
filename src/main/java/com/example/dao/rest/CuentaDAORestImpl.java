@@ -14,13 +14,14 @@ import com.example.model.Cuenta;
 import com.example.model.Movimiento;
 
 /**
+ * Implementacion de cuentas con un servicio web.
  * 
  * @author Gustavo Bazan
  *
  */
 public class CuentaDAORestImpl implements CuentaDAO {
-	
-    private static final Logger logger = Logger.getLogger(CuentaDAORestImpl.class.toString());
+	/** Logger */
+    private static final Logger logger = Logger.getLogger(CuentaDAORestImpl.class.getCanonicalName());
 	private final String SERVER;
     
 	public CuentaDAORestImpl(String server){

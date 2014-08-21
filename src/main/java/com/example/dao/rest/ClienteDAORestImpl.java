@@ -19,10 +19,14 @@ import com.example.model.Cliente;
  *
  */
 public class ClienteDAORestImpl implements ClienteDAO {
-
-    private static final Logger logger = Logger.getLogger(ClienteDAORestImpl.class.toString());
+	/** Logger */
+    private static final Logger logger = Logger.getLogger(ClienteDAORestImpl.class.getCanonicalName());
     private final String SERVER;
     
+    /**
+     * 
+     * @param server service uri
+     */
     public ClienteDAORestImpl(String server){
     	SERVER = server;
     }   

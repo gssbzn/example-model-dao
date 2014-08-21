@@ -6,7 +6,7 @@ import com.example.model.Cuenta;
 import com.example.model.Movimiento;
 
 /**
- * 
+ * DAO for Cuenta Model
  * @author Gustavo Bazan
  *
  */

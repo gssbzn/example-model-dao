@@ -15,15 +15,19 @@ import com.example.model.Cuenta;
 import com.example.model.Movimiento;
 
 /**
+ * Implementacion en memoria de Movimientos
  * 
  * @author Gustavo Bazan
  *
  */
 public class MovimientoDAOMemoryImpl implements MovimientoDAO {
-    private static final MovimientoDAOMemoryImpl INSTANCE = new MovimientoDAOMemoryImpl();
-
-    private static final Logger logger = Logger.getLogger(MovimientoDAOMemoryImpl.class.toString());
+    /** Singleton instance */
+	private static final MovimientoDAOMemoryImpl INSTANCE = new MovimientoDAOMemoryImpl();
+    /** Logger */
+    private static final Logger logger = Logger.getLogger(MovimientoDAOMemoryImpl.class.getCanonicalName());
+    /** Data */
     private static Vector<Movimiento> movimientos;
+    /** Threadsafe ID controller */
     private static AtomicInteger LAST_ID;
 
     private Integer incrementCount() {

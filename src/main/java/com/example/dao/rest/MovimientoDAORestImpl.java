@@ -19,15 +19,20 @@ import com.example.model.Cuenta;
 import com.example.model.Movimiento;
 
 /**
+ * Implementacion de Movimientos con un servicio Web.
  * 
  * @author Gustavo Bazan
  *
  */
 public class MovimientoDAORestImpl implements MovimientoDAO {
-
-    private static final Logger logger = Logger.getLogger(MovimientoDAORestImpl.class.toString());
+	/** Logger */
+    private static final Logger logger = Logger.getLogger(MovimientoDAORestImpl.class.getCanonicalName());
     private final String SERVER;   
     
+    /**
+     * 
+     * @param server
+     */
     public MovimientoDAORestImpl(String server){
     	SERVER = server;
     }
@@ -73,7 +78,6 @@ public class MovimientoDAORestImpl implements MovimientoDAO {
         		cause.printStackTrace();
         	}
     	}
-    	
     	
         return movimiento;
     }

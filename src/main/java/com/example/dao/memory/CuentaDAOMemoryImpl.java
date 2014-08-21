@@ -17,15 +17,19 @@ import com.example.model.Cuenta;
 import com.example.model.Movimiento;
 
 /**
+ * Cuenta DAO Memory Implementation.
  * 
  * @author Gustavo Bazan
  *
  */
 public class CuentaDAOMemoryImpl implements CuentaDAO {
+	/** Singleton instance */
     private static final CuentaDAOMemoryImpl INSTANCE = new CuentaDAOMemoryImpl();
-	
-    private static final Logger logger = Logger.getLogger(CuentaDAOMemoryImpl.class.toString());
+    /** Logger */
+    private static final Logger logger = Logger.getLogger(CuentaDAOMemoryImpl.class.getCanonicalName());
+    /** Data */
     private static final Vector<Cuenta> cuentas = new Vector<>();
+    /** Threadsafe ID control */
     private static AtomicInteger LAST_ID;
 	
     private CuentaDAOMemoryImpl(){

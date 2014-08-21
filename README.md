@@ -7,12 +7,24 @@ Cuenta con dos implementaciones de DAO, una en memoria (servidor) y una en RESTf
 
 ## Instalacion y uso
 
+###Dependencia Maven:
+Puedes usar la dependencia maven con:
 ```xml
-	<dependency>
-		<groupId>com.example</groupId>
-		<artifactId>acreenciasModel</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</dependency>
+<dependency>
+	<groupId>com.example</groupId>
+	<artifactId>acreenciasModel</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+</dependency>
+```
+### Implementacion en memoria
+
+```java
+DAOFactory daoFactory = DAOFactory.getDAOFactory(DAOTYPE.MEMORYFACTORY);
+```
+### Implementacion RESTful
+
+```java
+DAOFactory daoFactory = DAOFactory.getDAOFactory(DAOTYPE.RESTFULFACTORY);
 ```
 
 ## License
