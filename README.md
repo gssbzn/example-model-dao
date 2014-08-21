@@ -1,13 +1,13 @@
 Modelos de Acreencias
 =====================
 
-## Descripcion
-Proyecto indemendiente de Modelos y DAOs para acreencias para permitir reutilizarlos en cliente y servidor.
+Proyecto indemendiente de Modelos y DAOs de acreencias y asi permitir reutilizarlos en cliente y servidor.
 Cuenta con dos implementaciones de DAO, una en memoria (servidor) y una en RESTful(cliente).
 
 ## Instalacion y uso
 
 ###Dependencia Maven:
+
 Puedes usar la dependencia maven con:
 ```xml
 <dependency>
@@ -16,11 +16,13 @@ Puedes usar la dependencia maven con:
 	<version>0.0.1-SNAPSHOT</version>
 </dependency>
 ```
+
 ### Implementacion en memoria
 
 ```java
 DAOFactory daoFactory = DAOFactory.getDAOFactory(DAOTYPE.MEMORYFACTORY);
 ```
+
 ### Implementacion RESTful
 
 ```java
