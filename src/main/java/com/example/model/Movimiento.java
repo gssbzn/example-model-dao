@@ -1,10 +1,11 @@
 package com.example.model;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+
+import com.example.enums.TipoMovimiento;
 
 /**
  * La clase {@code Movimiento} representa los movimientos en las cuentas de los clientes.
@@ -16,7 +17,7 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlRootElement
 @XmlType (propOrder={"id","cuenta","tipo","monto"})
-public final class Movimiento implements Model<Integer>, Serializable {
+public final class Movimiento implements Model<Integer> {
     /**	 */
     private static final long serialVersionUID = 6778400152607853715L;
 

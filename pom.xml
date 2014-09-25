@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.example</groupId>
-  <artifactId>acreenciasModel</artifactId>
+  <artifactId>example-model-dao</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
@@ -12,7 +12,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <jersey.version>2.11</jersey.version>
+    <jersey.version>2.12</jersey.version>
+    <junit.version>4.11</junit.version>
   </properties>
   <build>
     <plugins>
@@ -32,5 +33,11 @@
 		<artifactId>jersey-client</artifactId>
 		<version>${jersey.version}</version>
 	</dependency>
+	<dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 </project>

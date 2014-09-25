@@ -1,8 +1,12 @@
 package com.example.factory;
 
+import com.example.dao.ArticleDAO;
+import com.example.dao.ClientDAO;
 import com.example.dao.ClienteDAO;
 import com.example.dao.CuentaDAO;
 import com.example.dao.MovimientoDAO;
+import com.example.dao.TransactionDAO;
+import com.example.dao.UserDAO;
 
 /**
  * Factory de DAOs
@@ -38,6 +42,30 @@ public abstract class DAOFactory {
      * @return
      */
     public abstract MovimientoDAO getMovimientoDAO();
+    
+    /**
+     * 
+     * @return
+     */
+    public abstract ClientDAO getClientDAO();
+    
+    /**
+     * 
+     * @return
+     */
+    public abstract ArticleDAO getArticleDAO();
+    
+    /**
+     * 
+     * @return
+     */
+    public abstract TransactionDAO getTransactionDAO();
+    
+    /**
+     * 
+     * @return
+     */
+    public abstract UserDAO getUserDAO();
     
     /**
      * Obtener los daos deseados segun el tipo

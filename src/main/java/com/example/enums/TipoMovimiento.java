@@ -1,4 +1,4 @@
-package com.example.model;
+package com.example.enums;
 
 /**
  * Tipos de operaciones para un {@code Movimiento}

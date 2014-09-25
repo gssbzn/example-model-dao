@@ -1,6 +1,5 @@
 package com.example.model;
 
-import java.io.Serializable;
 import java.util.Collection;
 
 import javax.xml.bind.annotation.XmlRootElement;
@@ -15,7 +14,7 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlRootElement
 @XmlType (propOrder={"id","cedula","nombre"})
-public final class Cliente implements Model<Integer>, Serializable {	
+public final class Cliente implements Model<Integer> {	
     /**	 */
     private static final long serialVersionUID = -3956424980931876024L;
     

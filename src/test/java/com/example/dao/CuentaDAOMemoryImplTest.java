@@ -12,12 +12,12 @@ import org.junit.Test;
 
 import com.example.dao.memory.ClienteDAOMemoryImpl;
 import com.example.dao.memory.CuentaDAOMemoryImpl;
+import com.example.enums.TipoCuenta;
 import com.example.factory.DAOFactory;
 import com.example.factory.DAOFactory.DAOTYPE;
 import com.example.model.Cliente;
 import com.example.model.Cuenta;
 import com.example.model.Movimiento;
-import com.example.model.TipoCuenta;
 
 /**
  * 

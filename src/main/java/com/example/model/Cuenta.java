@@ -1,10 +1,11 @@
 package com.example.model;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+
+import com.example.enums.TipoCuenta;
 
 /**
  * La clase {@code Cuenta} representa las cuentas que puede tener
@@ -17,7 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlRootElement
 @XmlType (propOrder={"id","cliente","tipo","saldo"})
-public final class Cuenta implements Model<Integer>, Serializable {
+public final class Cuenta implements Model<Integer> {
     /**	 */
     private static final long serialVersionUID = -1768584903284441598L;
 
