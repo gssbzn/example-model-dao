@@ -1,7 +1,7 @@
 Modelos de Acreencias
 =====================
 
-Proyecto indemendiente de Modelos y DAOs de acreencias y asi permitir reutilizarlos en cliente y servidor.
+Proyecto independiente de Modelos y DAOs de acreencias que permite reutilizarlos en cliente y servidor.
 Cuenta con dos implementaciones de DAO, una en memoria (servidor) y una en RESTful(cliente).
 
 ## Instalacion y uso
